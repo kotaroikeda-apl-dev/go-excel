@@ -6,6 +6,8 @@
 docker compose up -d # データベース起動
 go run cmd/basic/main.go # データベースからExcelを出力
 go run cmd/format/main.go # Excel のフォーマット調整
+go run cmd/insert-create/main.go # データベースにデータを挿入するSQLを作成
+go run cmd/stream/main.go # 大容量のデータをストリームでExcelに出力
 docker compose down # データベース停止
 ```
 
@@ -17,6 +19,7 @@ docker compose down # データベース停止
 4. **`excelize.Font`** でフォントのスタイルを設定する。
 5. **`excelize.Fill`** でセルの背景色を設定する。
 6. **`excelize.Border`** でセルの枠線を設定する。
+7. **`excelize.StreamWriter`** で大容量のデータをストリームで Excel に出力する。
 
 ## 作成者
 
